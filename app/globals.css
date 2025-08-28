@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-beige: #f5e6d3;
+  --color-cream: #fff8e7;
+  --color-white: #ffffff;
+  --color-black: #333333;
+  --color-accent: #ff6b6b;
+  --color-text: #4a4a4a;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-black);
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent/80;
+  }
+
+  .btn-secondary {
+    @apply bg-beige text-black hover:bg-beige/80;
+  }
+}
